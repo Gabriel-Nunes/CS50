@@ -1,5 +1,4 @@
 
-
 // this program uses the Vigenere Cypher to encipher
 // a text taken from user
 
@@ -17,7 +16,6 @@ int main(int argc, string argv[])
         k[a] = argv[1][a];   
     }
     
-    int j = strlen(k);
     
 // I'll insert the argv[1] validation
 // here later.
@@ -33,7 +31,8 @@ int main(int argc, string argv[])
         
         // iterate between string "p" elements,
         // and print the ciphered text stored in "c" variable;
-        for (int i = 0, n = strlen(p); i < n; i++){
+        for (int i = 0, j = strlen(k), n = strlen(p); i < n; i++){
+            
             int c = 0;
             if (isalpha(p[i])) {
                 if (isupper(p[i]))
@@ -63,3 +62,4 @@ int main(int argc, string argv[])
             return 1;
         }
 }
+
